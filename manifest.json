@@ -1,0 +1,27 @@
+{
+  "name": "Watch kinopoisk",
+  "description": "Upgrade kinopoisk.ru to a cinema",
+  "version": "1.0.0",
+  "author": "Dimkin the pro",
+  "homepage_url": "https://github.com/dimkinthepro/watch-kinopoisk-chrome-extension",
+  "manifest_version": 2,
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "browsingData",
+    "https://*.kinopoisk.ru/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "content_scripts": [{
+    "matches": ["https://*.kinopoisk.ru/*"],
+    "js": ["yohoho.js","player.js"],
+    "css": ["player.css"]
+  }],
+  "icons": {
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}
